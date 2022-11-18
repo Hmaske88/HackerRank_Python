@@ -1,0 +1,13 @@
+from collections import Counter
+n=int(input())
+l1=Counter(map(int,input().split()))
+nc=int(input())
+price=0
+for i in range(nc):
+    ss,sp=map(int,input().split(" "))
+    if (l1[ss]!=0):
+        l1[ss]=l1[ss]-1
+        price=price + sp
+    else:
+        continue
+print(price)
