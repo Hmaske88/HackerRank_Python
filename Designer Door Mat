@@ -1,0 +1,17 @@
+n,m=map(int,input().split())
+mid=".|."
+n_mid=1         #number of mid
+for i in range(1,n+1):
+    s=3*n_mid           #for number of spaces occupied by mid
+    if(i<(n//2+1)):
+        print((((m-s)//2)*"-")+n_mid*mid+(((m-s)//2)*"-"))
+        n_mid+=2
+        
+    elif(i>(n//2+1)):
+        print((((m-s)//2)*"-")+n_mid*mid+(((m-s)//2)*"-"))
+        n_mid-=2
+
+    else:
+        print((((m-7)//2)*"-")+"WELCOME"+(((m-7)//2)*"-"))
+        #number of letters in WELCOME are subtracted from m
+        n_mid-=2
