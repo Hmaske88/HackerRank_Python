@@ -1,0 +1,18 @@
+import string
+def print_rangoli(size):
+    alphabets=string.ascii_lowercase
+    width=4*size-3
+    lines=2*size-1
+    x=0
+    for i in range(lines):
+        rightPart=alphabets[size-1-x:size]
+        leftPart=rightPart[:0:-1]
+        print("-".join(leftPart+rightPart).center(width,"-"))
+        if(i<=(lines//2-1)):
+            x+=1
+        else:
+            x-=1
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
