@@ -1,0 +1,19 @@
+def minion_game(string):
+    Scount=0
+    Kcount=0
+    for i in range(len(string)):
+        if string[i] in "AEIOU":
+            Kcount+=(len(string)-i)
+        else:
+            Scount+=(len(string)-i)
+    
+    if(Kcount>Scount):
+        print("Kevin",str(Kcount))
+    elif(Kcount<Scount):
+        print("Stuart",str(Scount))
+    else:
+        print("Draw")
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
