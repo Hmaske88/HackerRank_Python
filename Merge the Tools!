@@ -1,0 +1,18 @@
+def merge_the_tools(string, k):
+    x=0
+    y=k
+    for i in range(len(string)//k):
+        substr=string[x:y]
+        ss=""
+        for i in substr:
+            if i in ss:
+                pass
+            else:
+                ss+=i
+        print(ss)
+        x+=k
+        y+=k
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
