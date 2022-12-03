@@ -1,0 +1,11 @@
+from itertools import permutations
+
+s,k=input().split(" ")
+
+L=list(permutations(s,int(k)))
+L.sort()
+
+for i in L:
+    for j in range(int(k)):
+        print(i[j],end="")
+    print()
