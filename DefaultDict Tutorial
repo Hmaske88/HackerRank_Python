@@ -1,0 +1,21 @@
+from collections import defaultdict
+
+d=defaultdict(list)
+
+n,m=map(int,input().split())
+for i in range(n):
+    value=input()
+    d['A'].append(value)
+    
+for i in range(m):
+    value=input()
+    d['B'].append(value)
+
+for i in d['B']:
+    if i in d['A']:
+        for j in range(n):
+            if(i==d['A'][j]):
+                print(j+1,end=" ")
+        print()
+    else:
+        print("-1")
