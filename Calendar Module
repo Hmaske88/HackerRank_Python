@@ -1,0 +1,7 @@
+import calendar
+
+month,day,year=map(int,input().split())
+
+dayNumber=calendar.weekday(year,month,day)
+Day=calendar.day_name[dayNumber].upper()
+print(Day)
