@@ -1,0 +1,14 @@
+from collections import OrderedDict
+
+n=int(input())
+super_market=OrderedDict()
+
+for i in range(n):
+    a,b,c=input().rpartition(' ')
+    c=int(c)
+    if a in super_market:
+        c+=super_market[a]
+    super_market[a]=c
+    
+for key,value in super_market.items():
+    print(key,value)
