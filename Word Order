@@ -1,0 +1,13 @@
+from collections import OrderedDict
+n=int(input())
+
+d=OrderedDict()
+for i in range(n):
+    element=input()
+    if element in d:
+        d[element]=d[element]+1
+    else:
+        d[element]=1
+print(len(d))
+for key,value in d.items():
+    print(value,end=" ")
