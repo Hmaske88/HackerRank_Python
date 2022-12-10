@@ -1,0 +1,14 @@
+from collections import deque
+d=deque()
+n=int(input())
+for i in range(n):
+    x,y,z=input().partition(' ')
+    if(x=="append"):
+        d.append(z)
+    elif(x=="pop"):
+        d.pop()
+    elif(x=="popleft"):
+        d.popleft()
+    elif(x=="appendleft"):
+        d.appendleft(z)
+print(" ".join(d))
