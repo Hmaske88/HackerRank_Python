@@ -1,0 +1,11 @@
+import math
+
+AB=float(input())
+BC=float(input())
+
+tanC=AB/BC
+Theta=math.atan(tanC)
+Theta=math.degrees(Theta)
+
+Theta=int(round(Theta))
+print(Theta,"\N{DEGREE SIGN}",sep="")
