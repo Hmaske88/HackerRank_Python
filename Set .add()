@@ -1,0 +1,5 @@
+n=int(input())
+Dis_Country=set()
+for i in range(n):
+    Dis_Country.add(input())
+print(len(Dis_Country))
