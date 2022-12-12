@@ -1,0 +1,9 @@
+n=int(input())
+Eset=set(input().split())
+
+b=int(input())
+Fset=set(input().split())
+
+EFset=Eset.union(Fset)
+
+print(len(EFset))
