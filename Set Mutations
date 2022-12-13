@@ -1,0 +1,16 @@
+n=int(input())
+A=set(map(int,input().split()))
+
+m=int(input())
+for i in range(m):
+    name,length=input().split()
+    Set=set(map(int,input().split()))
+    if(name=="update"):
+        A.update(Set)
+    elif(name=="intersection_update"):
+        A.intersection_update(Set)
+    elif(name=="difference_update"):
+        A.difference_update(Set)
+    elif(name=="symmetric_difference_update"):
+        A.symmetric_difference_update(Set)
+print(sum(A))
