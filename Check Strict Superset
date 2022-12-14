@@ -1,0 +1,41 @@
+A=set(input().split())
+N=int(input())
+
+
+# Method 1
+Acnt=0
+Ncnt=0
+flag=0
+for i in range(N):
+    B=set(input().split())
+    for i in B:
+        if i in A:
+            Acnt+=1
+        else:
+            flag=1
+            break
+    if flag==1:
+        print(False)
+        break
+    if(Acnt<len(A)):
+        Acnt=0
+        Ncnt+=1
+if(Ncnt==N):
+    print(True)
+
+
+# Method 2
+Ncnt=0
+for i in range(N):
+    B=set(input().split())
+    if B.issubset(A):
+        if A.issubset(B):
+            print(False)
+            break
+        else:
+            Ncnt+=1
+    else:
+        print(False)
+        break  
+if(Ncnt==N):
+    print(True)
