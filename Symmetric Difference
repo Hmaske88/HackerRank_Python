@@ -1,0 +1,7 @@
+m=int(input())
+mSet=set(map(int,input().split()))
+n=int(input())
+nSet=set(map(int,input().split()))
+
+for i in sorted(mSet.symmetric_difference(nSet)):
+    print(i)
