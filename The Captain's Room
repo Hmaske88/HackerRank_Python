@@ -1,0 +1,5 @@
+k=int(input())
+List=list(map(int,input().split()))
+Set=set(List)
+x=sum(Set)*k-sum(List)
+print(x//(k-1))
