@@ -1,0 +1,8 @@
+from collections import Counter
+
+s=input()
+s=sorted(s)
+s=list(s)
+x=Counter(s)
+for key, value in x.most_common(3):
+    print(key,value)
