@@ -1,0 +1,50 @@
+t=int(input())
+
+def piling(List):
+    if(List==sorted(List)):
+        return "Yes"
+    
+    if(list(reversed(List))==sorted(List)):
+        return "Yes"
+    
+    x=len(List)
+    for i in range(len(List)-1):
+        if(List[i] >= List[i+1]):
+            continue
+        else:
+            m=i
+            break
+    for i in range(m,len(List)-1):
+        if(List[i] <= List[i+1]):
+            if(i==len(List)-2):
+                return "Yes"
+            continue
+        else:
+            return "No"
+
+for i in range(t):
+    n=int(input())
+    c=list(map(int,input().split()))
+    print(piling(c))
+    
+
+# t=int(input())
+# def piling(List):
+#     if(List==sorted(List)):
+#         return "Yes"
+    
+#     if(list(reversed(List))==sorted(List)):
+#         return "Yes"
+    
+#     m=List.index(min(List))  #for finding the index of smallest element in list
+#     L1=List[:m]
+#     L2=List[m:]
+    
+#     if((list(reversed(L1))==sorted(L1)) & (L2==sorted(L2))):
+#         return "Yes"
+#     else:
+#         return "No"
+# for i in range(t):
+#     n=int(input())
+#     c=list(map(int,input().split()))
+#     print(piling(c))
