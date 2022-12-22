@@ -1,0 +1,30 @@
+from itertools import combinations
+n=int(input())
+l=list(input().split())
+k=int(input())
+
+if('a' in l):
+    a=l.index('a')+1    # 1 is added as it is 1 based indexing
+else:
+    a=0
+
+l1=list(l.index(i)+1 for i in l)
+
+l2=list(combinations(l1,k))
+
+count=0
+for i in l2:
+    if a in i:
+        count+=1
+
+print(count/len(l2))
+
+
+##another code
+# from itertools import combinations
+# n=int(input())
+# l=list(input().split())
+# k=int(input())
+# l4=list(combinations(l,k))
+# l3=list(filter(lambda x:'a' in x,l4))
+# print(len(l3)/len(l4))
