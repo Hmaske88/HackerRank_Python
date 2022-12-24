@@ -1,0 +1,9 @@
+n,x=map(int,input().split())
+List0fList=[]
+for i in range(x):
+    List0fList.append(list(map(float,input().split())))
+
+l=zip(*List0fList)
+
+for i in l:
+    print(sum(i)/x)
