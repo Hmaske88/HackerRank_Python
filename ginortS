@@ -1,0 +1,18 @@
+s=input()
+upperString=""
+lowerString=""
+oddnumbers=""
+evennumbers=""
+for i in s:
+    if(i.isupper()):
+        upperString+=i
+    elif(i.islower()):
+        lowerString+=i
+    elif(int(i)%2!=0):
+        i=str(i)
+        oddnumbers+=i
+    else:
+        evennumbers+=i
+
+finalString=sorted(lowerString)+sorted(upperString)+sorted(oddnumbers)+sorted(evennumbers)
+print(*finalString,sep="")
