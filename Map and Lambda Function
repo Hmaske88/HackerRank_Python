@@ -1,0 +1,15 @@
+cube = lambda x: pow(x,3)
+def fibonacci(n):
+    l=[]
+    for i in range(n):
+        if(i==0):
+            l.append(0)
+        elif(i==1):
+            l.append(1)
+        else:
+            l.append(l[-1]+l[-2])
+    return l
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
