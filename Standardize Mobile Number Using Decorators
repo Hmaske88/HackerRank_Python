@@ -1,0 +1,25 @@
+def wrapper(f):
+    def fun(l):
+        List=[]
+        for i in range(len(l)):
+            List.append(l[i][-10:])
+        for i in sorted(List):
+            print("+91",i[:5],i[-5:])
+        
+        #method 2
+        # List=[]
+        # for i in l:
+        #     List.append("+91 "+i[-10:-5]+" "+i[-5:])
+        # f(List)
+        
+        # method 3
+        # f("+91 "+i[-10:-5]+" "+i[-5:] for i in l)
+    return fun
+
+@wrapper
+def sort_phone(l):
+    print(*sorted(l), sep='\n')
+
+if __name__ == '__main__':
+    l = [input() for _ in range(int(input()))]
+    sort_phone(l) 
