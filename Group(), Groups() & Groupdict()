@@ -1,0 +1,8 @@
+import re
+s=input()
+x=re.search(r"([0-9]|[a-z])\1+",s)
+
+if(x):
+    print(x.group()[0])
+else:
+    print(-1)
