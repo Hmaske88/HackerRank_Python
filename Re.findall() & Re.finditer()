@@ -1,0 +1,8 @@
+import re
+s=input()
+x=re.findall(r"(?<=[^aeiou0-9 +-])[aeiou]{2,}(?=[^aeiou0-9 +-])",s,flags=re.I)   #I-->IGNORECASE
+
+if(len(x)):
+    print(*x,sep="\n")
+else:
+    print(-1)
