@@ -1,0 +1,9 @@
+import numpy
+
+List=list(map(int,input().split()))
+arr=numpy.array(List)
+print(numpy.reshape(arr,(3,3)))
+
+# another way
+# arr.shape=(3,3)
+# print(arr)
