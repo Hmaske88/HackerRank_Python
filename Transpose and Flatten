@@ -1,0 +1,14 @@
+import numpy
+
+n,m=input().split()
+l=[]
+for i in range(int(n)):
+    l.append(list(map(int,input().split())))
+
+arr=numpy.array(l)
+
+print(arr.T)
+# print(numpy.transpose(arr))
+
+print(arr.flatten())
+# print(arr.ravel())
