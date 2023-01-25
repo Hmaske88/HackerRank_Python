@@ -1,0 +1,11 @@
+import re
+n=int(input())
+
+def isValid(number):
+    if(re.match(r"[789][\d]{9}$",number)):
+        print("YES")
+    else:
+        print("NO")
+
+for i in range(n):
+    isValid(input())
