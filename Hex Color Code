@@ -1,0 +1,17 @@
+import re
+n=int(input())
+f=0
+for i in range(n):
+    line=input()
+    if(re.search(r"{",line)):
+        f=1
+        continue
+    
+    if(re.search(r"}",line)):
+        f=0
+        continue
+        
+    if(f==1):
+        codes=re.findall(r"#[0-9a-fA-F]{3,6}",line)
+        if(len(codes)):
+            print(*codes,sep="\n")
