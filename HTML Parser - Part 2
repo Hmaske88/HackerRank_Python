@@ -9,7 +9,7 @@ class MyHTMLParser(HTMLParser):
             print(">>> Single-line Comment")
             print(data)
     def handle_data(self,data):
-        if(data.strip()):
+        if(data!="\n"):
             print(">>> Data")
             print(data)
   
