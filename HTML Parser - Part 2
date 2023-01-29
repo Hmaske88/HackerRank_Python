@@ -9,8 +9,9 @@ class MyHTMLParser(HTMLParser):
             print(">>> Single-line Comment")
             print(data)
     def handle_data(self,data):
-        print(">>> Data")
-        print(data)
+        if(data.strip()):
+            print(">>> Data")
+            print(data)
   
 html = ""       
 for i in range(int(input())):
