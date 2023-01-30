@@ -1,0 +1,14 @@
+import re
+n=int(input())
+
+for i in range(n):
+    uid=input()
+    if(bool(re.search(r"\w*[A-Z]\w*[A-Z]\w*",uid)) and bool(re.search(r"\w*[0-9]\w*[0-9]\w*[0-9]\w*",uid)) and len(uid)==10):
+        for i in range(10):
+            if(uid[i] in uid[i+1:]):
+                print("Invalid")
+                break
+            elif(i==9):
+                print("Valid")
+    else:
+        print("Invalid")
