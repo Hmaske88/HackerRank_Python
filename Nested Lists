@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    list2=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        list1=[name,score]
+        list2.append(list1)
+    outputlist=sorted(list2,key=lambda l:l[1]) 
+    
+    element=outputlist[0][1]
+    for i in outputlist:
+        if element<i[1]:
+            element=i[1]
+            break
+        
+    list3=[]
+    for i in outputlist:
+        if i[1]==element:
+            list3.append(i[0])   
+    list3=sorted(list3)
+    print(*list3,sep="\n")  
